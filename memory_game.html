@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tile Memory Game</title>
+        <script src="memory_game.js"></script>
+        <link rel="stylesheet" href="memory_game.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="memory_game.js"></script>
+    </head>
+    <body onload="load()">
+        <div id="start_screen" class="overlay">
+            <div class="flex_container">
+                <h1 class="title" id="title_class">COMP 4537</h1>
+                <h3 id="title_game">Memory Game</h3>
+                <h4 id="title_enter">Enter a username</h4>
+                <input type="text" id="username_input">
+                <button class="button" id="start_button" onclick="enter()">START</button>
+            </div>  
+        </div>
+        <div id="end_screen" class="overlay">
+            <div class="flex_container">
+                <h1 class="title" id="game_over">GAME OVER</h1>
+                <div id="grid_end">
+                    <h3 class="subtitle">USERNAME</h3>
+                    <h3 class="subtitle">SCORE</h3>
+                    <h2 class="subtitle" id="username"></h2>
+                    <h2 class="subtitle" id="final_score"></h2>
+                </div>
+                <button class="button" id="submit_button" onclick="submit()">SUBMIT</button>
+                <button class="button" id="restart_button" onclick="restart()">RESTART</button>
+            </div>
+        </div>
+        <div id="topbar">
+            <div class="top_sec" id="topsec_level">
+                <a>Level</a>
+                <a id="level">0</a>
+            </div>
+            <div class="top_sec" id="topsec_name">
+                <a>Username</a>
+            </div>
+            <div class="top_sec" id="topsec_score">
+                <a>Score</a>
+                <a id="score">0</a> 
+            </div>
+        </div>
+        <div id="main">
+            <div id="square">
+            </div> 
+        </div>
+        <div id="bottom">
+            <button class="button" id="terminate_button" onclick="terminate()">TERMINATE</button>
+        </div>
+    </body>
+</html>
